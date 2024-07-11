@@ -1,8 +1,10 @@
+// comando para rodar o servidor docker logs devbills-api --follow
+
 import mongoose, { connect } from "mongoose";
 
 export async function setupMongo(): Promise<void> {
     try {
-        if(mongoose.connection.readyState == 1) {
+        if(mongoose.connection.readyState === 1) {
             return;
         }
 
